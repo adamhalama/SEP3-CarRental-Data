@@ -1,0 +1,15 @@
+you have to add a file in this directory -> src/main/resources/application.properties
+
+
+and place this inside(and change the link, username and password):
+
+spring.datasource.url= jdbc:postgresql://localhost:5432/postgres
+spring.datasource.username= postgres
+spring.datasource.password= postgresql123
+
+spring.jpa.properties.hibernate.jdbc.lob.non_contextual_creation= true
+spring.jpa.properties.hibernate.dialect= org.hibernate.dialect.PostgreSQLDialect
+
+# Hibernate ddl auto (create, create-drop, validate, update)
+spring.jpa.hibernate.ddl-auto= create-drop
+
