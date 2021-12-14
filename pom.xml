@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.SEP3</groupId>
-    <artifactId>CarRentalAPI</artifactId>
+    <artifactId>CarRental-SpringBoot-REST-API</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>CarRentalAPI</name>
     <description>Demo project for Spring Boot</description>
