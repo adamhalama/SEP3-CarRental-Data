@@ -75,7 +75,6 @@ public class ReservationController
     @PostMapping("/reservations")
     public ResponseEntity<Reservation> createReservation(@Valid @RequestBody Reservation reservation)
     {
-        //todo maybe the setting is unnecessary
         reservation.setVehicle(vehicleRepository.getById(reservation.getVehicle().getId()));
         reservation.setCustomer(customerRepository.getById(reservation.getCustomer().getId()));
         if (reservation.getEmployee().getId() != -1)
@@ -107,9 +106,6 @@ public class ReservationController
         Reservation reservation = repository.findById(reservationId)
                 .orElseThrow(() -> new ResourceNotFoundException("Reservation not found for this id :: " + reservationId));
 
-//        reservation.setVehicleId(reservationDetails.getVehicleId());
-//        reservation.setCustomerId(reservationDetails.getCustomerId());
-//        reservation.setEmployeeId(reservationDetails.getEmployeeId());
         reservation.setVehicle(reservationDetails.getVehicle());
         reservation.setCustomer(reservationDetails.getCustomer());
         reservation.setEmployee(reservationDetails.getEmployee());

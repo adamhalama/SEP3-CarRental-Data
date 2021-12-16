@@ -46,9 +46,7 @@ public class LoginController
                 return ResponseEntity.ok().body(new UserLogin(true, customer.getId(), false));
             }
             return ResponseEntity.noContent().build();
-//            throw new ResourceNotFoundException("Wrong password");
         }
         return ResponseEntity.notFound().build();
-//        throw new ResourceNotFoundException("User with this email not found:" + userLogin.getEmail());
     }
 }

@@ -37,7 +37,8 @@ public class CustomerController
     }
 
     @PostMapping("/customers")
-    public ResponseEntity<Customer> createCustomer(@Valid @RequestBody Customer customer) throws EmailAlreadyUsedException
+    public ResponseEntity<Customer> createCustomer(@Valid @RequestBody Customer customer)
+            throws EmailAlreadyUsedException
     {
         if (employeeRepository.findByEmail(customer.getEmail()) != null)
         {

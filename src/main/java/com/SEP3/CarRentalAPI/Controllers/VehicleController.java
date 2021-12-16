@@ -39,11 +39,12 @@ public class VehicleController
 
         for (Reservation reservation : reservationList)
         {
+            //searching for reservations in this time
             if ( (reservation.getDateStart() < startDate && startDate < reservation.getDateEnd() )
                     || ( reservation.getDateStart() < endDate && endDate < reservation.getDateEnd() ))
             {
+                // removing vehicles that are in the reservation from the list
                 vehicleList.removeIf(vehicle -> vehicle.getId() == reservation.getVehicle().getId());
-//                vehicleList.remove(reservation.getVehicle());
             }
         }
 
