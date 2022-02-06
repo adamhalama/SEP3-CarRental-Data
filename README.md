@@ -1,6 +1,6 @@
 # CarRental-SpringBoot-REST-API
 
-RESTful Java-SpringBoot API, using PostgreSQL database through JPA Hibernate 
+RESTful Java-SpringBoot API, using PostgreSQL database through JPA Hibernate.
 This server is running on a hosting platform Heroku. The database is on AWS.
 
 
