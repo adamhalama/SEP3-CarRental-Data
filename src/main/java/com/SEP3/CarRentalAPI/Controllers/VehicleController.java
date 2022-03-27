@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,17 @@ public class VehicleController
     @GetMapping("/vehicles")
     public ResponseEntity<List<Vehicle>> getAllVehicles()
     {
-        return ResponseEntity.ok().body(repository.findAll());
+//        return ResponseEntity.ok().body(repository.findAll());
+
+
+        List<Vehicle> list = new ArrayList<>();
+
+        Vehicle vehicle = new Vehicle();
+        vehicle.setId(1);
+        vehicle.setName("test");
+        list.add(vehicle);
+        return ResponseEntity.ok().body(list);
+
     }
 
     @GetMapping("/vehicles/available/startDate={startDate}&endDate={endDate}")
